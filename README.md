@@ -1,10 +1,10 @@
-![Rotom-2.0](https://telegra.ph/file/98b9ebf8e4e142b4764d5.jpg)
+![TEλM LλMBDλ BOT](https://telegra.ph/file/98b9ebf8e4e142b4764d5.jpg)
 
-## What is Rotom-2.0?
-Rotom-2.0 is a Telegram Bot that provides all informations about Pokémon. It's accessible through this link <b><i>[Rotom-2.0](https://telegram.me/MadBoy_Rotomgram2_Bot)</i></b> or writing <b>@MadBoy_Rotomgram2_Bot</b> on Telegram search bar.
+## What is TEλM LλMBDλ BOT?
+TEλM LλMBDλ BOT is a Telegram Bot that provides all informations about Pokémon. It's accessible through this link <b><i>[TEλM LλMBDλ BOT](https://telegram.me/Team_Lambda_Bot)</i></b> or writing <b>@Team_Lambda_Bot</b> on Telegram search bar.
 
 ## Deploy to Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/madboy482/rotom-2.0.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/madboy-op/Team-Lambda-Bot.git)
 
 ## How it works?
 The bot has 6 main commands:
@@ -43,4 +43,4 @@ APIs have not been used to build this bot. So, some Thanks are due:
 * Smogon (smogon.com) for VGC usage
 
 ## Support
-If you need me, you can contact me sending a message on Telegram at <b><i>[MadBoy](https://telegram.me/Warning_MadBoy_is_Here)</i></b>.
+If you need me, you can contact me sending a message on Telegram at <b><i>[Satoshi](https://telegram.me/I_hv_fucking_fever_dont_tag)</i></b> or <b><i>[MadBoy](https://telegram.me/Warning_MadBoy_is_Here)</i></b>.
