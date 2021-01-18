@@ -14,7 +14,7 @@ app = Client(
     api_id=Config.aid,
     api_hash=Config.ahash,
     bot_token=Config.bot_token,
-    session_name='rotom-2.0'
+    session_name='Team-Lambda-Bot'
 )
 
 texts = json.load(open('src/texts.json', 'r'))
@@ -59,7 +59,7 @@ def get_bot_data(app, message):
     message.continue_propagation()
 
 
-@app.on_message(Filters.command(['stats', 'stats@MadBoy_Rotomgram2_Bot']))
+@app.on_message(Filters.command(['stats', 'stats@Team_Lambda_Bot']))
 def get_stats(app, message):
     if message.from_user.id in Config.sudo:
         members = 0
@@ -77,7 +77,7 @@ def get_stats(app, message):
 
 
 # ===== Home =====
-@app.on_message(Filters.command(['start', 'start@MadBoy_Rotomgram2_Bot']))
+@app.on_message(Filters.command(['start', 'start@Team_Lambda_Bot']))
 def start(app, message):
     app.send_message(
         chat_id=message.chat.id,
@@ -86,7 +86,7 @@ def start(app, message):
     )
 
 # ==== Type Pokemon =====
-@app.on_message(Filters.command(['type', 'type@MadBoy_Rotomgram2_Bot']))
+@app.on_message(Filters.command(['type', 'type@Team_Lambda_Bot']))
 def ptype(app, message):
     try:
         gtype = message.text.split(' ')[1]
@@ -101,7 +101,7 @@ def ptype(app, message):
     except KeyError as s:
         app.send_message(
             chat_id=message.chat.id,
-            text=("`Eeeh, LoL, This type doesn't exists :/ `\n"
+            text=("`Hmmm, I tried to check out the type in my list, but this type doesn't exists :/ `\n"
                   "`Do  /types  to check for the existing types.`")
         )
         return
@@ -152,7 +152,7 @@ def ptype_buttons(user_id):
         InlineKeyboardButton('Delete',callback_data=f"hexa_delete_{user_id}")]])
     return keyboard
     
-@app.on_message(Filters.command(['types', 'types@MadBoy_Rotomgram2_Bot']))
+@app.on_message(Filters.command(['types', 'types@Team_Lambda_Bot']))
 def types(app, message): 
     user_id = message.from_user.id
     app.send_message(
@@ -216,7 +216,7 @@ def button2(client: app, callback_query: CallbackQuery):
         )
   
 # ===== Pokemon Type Command ======
-@app.on_message(Filters.command(['ptype', 'ptype@MadBoy_Rotomgram2_Bot']))
+@app.on_message(Filters.command(['ptype', 'ptype@Team_Lambda_Bot']))
 def poketypes(app, message): 
     user_id = message.from_user.id
     try:
@@ -233,7 +233,7 @@ def poketypes(app, message):
     except KeyError:
         app.send_message(
             chat_id=message.chat.id,
-            text="`Eeeh, LoL, This pokemon doesn't exists :/`"
+            text="`Hmmm, I tried to check out the pokemon in my list, but this pokemon doesn't exists :/`"
         )
         return
     
@@ -313,10 +313,10 @@ def poketypes_back(client: app, callback_query: CallbackQuery):
         
 # ===== Data command =====
 @app.on_callback_query(Filters.create(lambda _, query: 'basic_infos' in query.data))
-@app.on_message(Filters.command(['data', 'data@MadBoy_Rotomgram2_Bot']))
+@app.on_message(Filters.command(['data', 'data@Team_Lambda_Bot']))
 def pkmn_search(app, message):
     try:
-        if message.text == '/data' or message.text == '/data@MadBoy_Rotomgram2_Bot':
+        if message.text == '/data' or message.text == '/data@Team_Lambda_Bot':
             app.send_message(message.chat.id, texts['error1'], parse_mode='HTML')
             return None
         pkmn = func.find_name(message.text)
@@ -472,14 +472,14 @@ def locations(app, call):
 
 # ===== Usage command =====
 @app.on_callback_query(Filters.create(lambda _, query: 'usage' in query.data))
-@app.on_message(Filters.command(['usage', 'usage@MadBoy_Rotomgram2_Bot']))
+@app.on_message(Filters.command(['usage', 'usage@Team_Lambda_Bot']))
 def usage(app, message):
     try:
         page = int(re.split('/', message.data)[1])
         dictt = func.get_usage_vgc(int(page), usage_dict['vgc'])
     except AttributeError:
         page = 1
-        text = '<i>Yeah, wi8!.. Connecting to Pokémon Showdown database...</i>'
+        text = '<i>Hmm, Wait kro, Connecting to Pokémon Showdown database...</i>'
         message = app.send_message(message.chat.id, text, parse_mode='HTML')
         dictt = func.get_usage_vgc(int(page))
         usage_dict['vgc'] = dictt['vgc_usage']
@@ -500,7 +500,7 @@ def usage(app, message):
 
 
 # ===== FAQ command =====
-@app.on_message(Filters.command(['faq', 'faq@MadBoy_Rotomgram2_Bot']))
+@app.on_message(Filters.command(['faq', 'faq@Team_Lambda_Bot']))
 def faq(app, message):
     text = texts['faq']
     app.send_message(
@@ -513,13 +513,13 @@ def faq(app, message):
 
 
 # ===== About command =====
-@app.on_message(Filters.command(['about', 'about@MadBoy_Rotomgram2_Bot']))
+@app.on_message(Filters.command(['about', 'about@Team_Lambda_Bot']))
 def about(app, message):
     text = texts['about']
     markup = InlineKeyboardMarkup([[
         InlineKeyboardButton(
             text='Github',
-            url='https://github.com/madboy482/rotom-2.0'
+            url='https://github.com/madboy-op/Team-Lambda-Bot'
         )
     ]])
 
@@ -535,7 +535,7 @@ def about(app, message):
 @app.on_message(Filters.create(lambda _, message: message.new_chat_members))
 def bot_added(app, message):
     for new_member in message.new_chat_members:
-        if new_member.id == 1480152521:
+        if new_member.id == 1524081172:
             text = texts['added']
             app.send_message(
                 chat_id=message.chat.id,
