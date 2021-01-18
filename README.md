@@ -1,4 +1,4 @@
-![TEλM LλMBDλ BOT](https://telegra.ph/file/98b9ebf8e4e142b4764d5.jpg)
+![TEλM LλMBDλ BOT](https://telegra.ph/file/3ea3ac0e7d200dfaecc03.jpg)
 
 ## What is TEλM LλMBDλ BOT?
 TEλM LλMBDλ BOT is a Telegram Bot that provides all informations about Pokémon. It's accessible through this link <b><i>[TEλM LλMBDλ BOT](https://telegram.me/Team_Lambda_Bot)</i></b> or writing <b>@Team_Lambda_Bot</b> on Telegram search bar.
